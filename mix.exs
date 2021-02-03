@@ -10,6 +10,7 @@ defmodule FortnoxEx.MixProject do
       version: @version,
       description: description(),
       package: package(),
+      name: "FortnoxEx",
       source_url: @github_url,
       elixir: "~> 1.11",
       elixirc_paths: elixirc_paths(Mix.env()),
