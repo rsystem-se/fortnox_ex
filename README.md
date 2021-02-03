@@ -22,6 +22,7 @@ Not used in production. Untested to most degree. Help wanted. Rate limiting is t
 * Offer (actions not implemented)
 * Order (actions not implemented)
 * Project (actions not implemented)
+* Supplier
 
 **NOT SUPPORTED YET - HELP WANTED**
 * Account Chart
@@ -59,7 +60,6 @@ Not used in production. Untested to most degree. Help wanted. Rate limiting is t
 * Supplier Invoice File Connection
 * Supplier Invoice Payment
 * Supplier Invoice
-* Supplier
 * Tax Reduction
 * Term of Delivery
 * Term of Payment
