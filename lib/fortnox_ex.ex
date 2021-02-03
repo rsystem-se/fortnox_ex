@@ -8,7 +8,8 @@ defmodule FortnoxEx do
   """
 
   alias FortnoxEx.Utils
-  alias FortnoxEx.Models.{AbsenceTransaction, Article, AttendanceTransaction, Contract, Customer, Invoice, Offer, Order}
+  alias FortnoxEx.Models.{AbsenceTransaction, Article, AttendanceTransaction, Contract, Customer, Employee, Invoice,
+                          Offer, Order, Project}
 
   defdelegate get_access_token(client_secret, authorization_code), to: Utils
   defdelegate client(client_secret, access_token), to: Utils
@@ -17,7 +18,8 @@ defmodule FortnoxEx do
   defdelegate list_absence_transactions(client, query), to: AbsenceTransaction
   defdelegate stream_absence_transactions(client, query), to: AbsenceTransaction
   defdelegate get_absence_transaction(client, absence_transaction_number), to: AbsenceTransaction
-  defdelegate update_absence_transaction(client, absence_transaction_number, absence_transaction_attrs), to: AbsenceTransaction
+  defdelegate update_absence_transaction(client, absence_transaction_number, absence_transaction_attrs),
+              to: AbsenceTransaction
   defdelegate delete_absence_transaction(client, absence_transaction_number), to: AbsenceTransaction
 
   defdelegate create_article(client, article_attrs), to: Article
@@ -31,7 +33,8 @@ defmodule FortnoxEx do
   defdelegate list_attendance_transactions(client, query), to: AttendanceTransaction
   defdelegate stream_attendance_transactions(client, query), to: AttendanceTransaction
   defdelegate get_attendance_transaction(client, attendance_transaction_number), to: AttendanceTransaction
-  defdelegate update_attendance_transaction(client, attendance_transaction_number, attendance_transaction_attrs), to: AttendanceTransaction
+  defdelegate update_attendance_transaction(client, attendance_transaction_number, attendance_transaction_attrs),
+              to: AttendanceTransaction
   defdelegate delete_attendance_transaction(client, attendance_transaction_number), to: AttendanceTransaction
 
   defdelegate create_contract(client, contract_attrs), to: Contract
