@@ -1,13 +1,21 @@
 defmodule FortnoxEx.MixProject do
   use Mix.Project
 
+  @version "0.1.0"
+  @github_url "https://github.com/rsystem-se/fortnox_ex"
+
   def project do
     [
       app: :fortnox_ex,
-      version: "0.1.0",
+      version: @version,
+      description: description(),
+      package: package(),
+      source_url: @github_url,
       elixir: "~> 1.11",
+      elixirc_paths: elixirc_paths(Mix.env()),
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      docs: docs()
     ]
   end
 
@@ -18,11 +26,39 @@ defmodule FortnoxEx.MixProject do
     ]
   end
 
+  defp description do
+    "Fortnox API client"
+  end
+
+  defp package do
+    [
+      maintainers: ["Nils Ivanson"],
+      licenses: ["MIT"],
+      links: %{
+        "GitHub" => @github_url
+      }
+    ]
+  end
+
+  defp elixirc_paths(_), do: ["lib"]
+
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      # {:dep_from_hexpm, "~> 0.3.0"},
-      # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
+      {:tesla, "~> 1.4.0"},
+      {:hackney, "~> 1.17.0"},
+      {:jason, ">= 1.0.0"},
+      {:ex_doc, "~> 0.21", only: :dev}
+    ]
+  end
+
+  defp docs do
+    [
+      main: "readme",
+      source_ref: "v#{@version}",
+      extras: ["README.md", "LICENSE"],
+      groups_for_modules: [],
+      nest_modules_by_prefix: []
     ]
   end
 end
