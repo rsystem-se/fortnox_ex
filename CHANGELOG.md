@@ -11,6 +11,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Label
 - Modes of Payment
 - Invoice Payment
+- Terms of Delivery 
+- Terms of Payment
 
 ### Fixed
 - Typoes with currency that shoud be currencies

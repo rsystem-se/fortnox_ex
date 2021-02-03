@@ -34,6 +34,8 @@ Not used in production. Untested to most degree. Help wanted. Rate limiting is t
 * Project (actions not implemented)
 * Supplier
 * Supplier Invoice
+* Terms of Delivery
+* Terms of Payment
 * Unit
 
 **NOT SUPPORTED YET - HELP WANTED**
@@ -62,8 +64,6 @@ Not used in production. Untested to most degree. Help wanted. Rate limiting is t
 * Supplier Invoice File Connection
 * Supplier Invoice Payment
 * Tax Reduction
-* Terms of Delivery
-* Terms of Payment
 * Trusted Email Domain
 * Trusted Email Sender
 * Voucher File Connection

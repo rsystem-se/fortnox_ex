@@ -159,6 +159,20 @@ defmodule FortnoxEx do
               to: Models.SupplierInvoice
   defdelegate delete_supplier_invoice(client, supplier_invoice_number), to: Models.SupplierInvoice
 
+  defdelegate create_terms_of_delivery(client, terms_of_delivery_attrs), to: Models.TermsOfDelivery
+  defdelegate list_terms_of_deliverys(client, query), to: Models.TermsOfDelivery
+  defdelegate stream_terms_of_deliverys(client, query), to: Models.TermsOfDelivery
+  defdelegate get_terms_of_delivery(client, terms_of_delivery_code), to: Models.TermsOfDelivery
+  defdelegate update_terms_of_delivery(client, terms_of_delivery_code, terms_of_delivery_attrs), to: Models.TermsOfDelivery
+  defdelegate delete_terms_of_delivery(client, terms_of_delivery_code), to: Models.TermsOfDelivery
+
+  defdelegate create_terms_of_payment(client, terms_of_payment_attrs), to: Models.TermsOfPayment
+  defdelegate list_terms_of_payments(client, query), to: Models.TermsOfPayment
+  defdelegate stream_terms_of_payments(client, query), to: Models.TermsOfPayment
+  defdelegate get_terms_of_payment(client, terms_of_payment_code), to: Models.TermsOfPayment
+  defdelegate update_terms_of_payment(client, terms_of_payment_code, terms_of_payment_attrs), to: Models.TermsOfPayment
+  defdelegate delete_terms_of_payment(client, terms_of_payment_code), to: Models.TermsOfPayment
+
   defdelegate create_unit(client, unit_attrs), to: Models.Unit
   defdelegate list_units(client, query), to: Models.Unit
   defdelegate stream_units(client, query), to: Models.Unit
