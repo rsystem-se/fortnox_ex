@@ -8,7 +8,7 @@ defmodule FortnoxEx do
   """
 
   alias FortnoxEx.Utils
-  alias FortnoxEx.Models.{Article, Contract, Customer, Invoice, Offer, Order}
+  alias FortnoxEx.Models.{Article, AttendanceTransaction, Contract, Customer, Invoice, Offer, Order}
 
   defdelegate get_access_token(client_secret, authorization_code), to: Utils
   defdelegate client(client_secret, access_token), to: Utils
@@ -19,6 +19,13 @@ defmodule FortnoxEx do
   defdelegate get_article(client, article_number), to: Article
   defdelegate update_article(client, article_number, article_attrs), to: Article
   defdelegate delete_article(client, article_number), to: Article
+
+  defdelegate create_attendance_transaction(client, attendance_transaction_attrs), to: AttendanceTransaction
+  defdelegate list_attendance_transactions(client, query), to: AttendanceTransaction
+  defdelegate stream_attendance_transactions(client, query), to: AttendanceTransaction
+  defdelegate get_attendance_transaction(client, attendance_transaction_number), to: AttendanceTransaction
+  defdelegate update_attendance_transaction(client, attendance_transaction_number, attendance_transaction_attrs), to: AttendanceTransaction
+  defdelegate delete_attendance_transaction(client, attendance_transaction_number), to: AttendanceTransaction
 
   defdelegate create_contract(client, contract_attrs), to: Contract
   defdelegate list_contracts(client, query), to: Contract
@@ -36,6 +43,13 @@ defmodule FortnoxEx do
   defdelegate get_customer(client, customer_number), to: Customer
   defdelegate update_customer(client, customer_number, customer_attrs), to: Customer
   defdelegate delete_customer(client, customer_number), to: Customer
+
+  defdelegate create_employee(client, employee_attrs), to: Employee
+  defdelegate list_employees(client, query), to: Employee
+  defdelegate stream_employees(client, query), to: Employee
+  defdelegate get_employee(client, employee_number), to: Employee
+  defdelegate update_employee(client, employee_number, employee_attrs), to: Employee
+  defdelegate delete_employee(client, employee_number), to: Employee
 
   defdelegate create_invoice(client, invoice_attrs), to: Invoice
   defdelegate list_invoices(client, query), to: Invoice
@@ -57,4 +71,11 @@ defmodule FortnoxEx do
   defdelegate get_order(client, order_number), to: Order
   defdelegate update_order(client, order_number, order_attrs), to: Order
   defdelegate delete_order(client, order_number), to: Order
+
+  defdelegate create_project(client, project_attrs), to: Project
+  defdelegate list_projects(client, query), to: Project
+  defdelegate stream_projects(client, query), to: Project
+  defdelegate get_project(client, project_number), to: Project
+  defdelegate update_project(client, project_number, project_attrs), to: Project
+  defdelegate delete_project(client, project_number), to: Project
 end

@@ -9,11 +9,14 @@ The documentation for FortnoxEx can be found at
 ## Models
 
 * Articles
+* AttendanceTransaction
 * Contract
 * Customer
+* Employee
 * Invoice (actions not implemented)
 * Offer (actions not implemented)
 * Order (actions not implemented)
+* Project (actions not implemented)
 
 ## Features for all models
 
