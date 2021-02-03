@@ -15,7 +15,7 @@ defmodule FortnoxEx.UtilsTest do
     end
   end
 
-  # @tag :skip
+  @tag :skip
   describe "rate limiting" do
     test "blow the fues" do
       client = FortnoxEx.client(client_secret(), access_token())
@@ -26,6 +26,7 @@ defmodule FortnoxEx.UtilsTest do
       |> Enum.map(
            fn _ ->
              {:ok, customer} = FortnoxEx.get_customer(client, customer["CustomerNumber"])
+             # Should blow up when {:error, :unavailable} is hit by the fuse melting
              assert customer["CustomerNumber"] == customer["CustomerNumber"]
            end
          )
