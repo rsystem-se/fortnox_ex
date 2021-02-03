@@ -1,0 +1,3 @@
+[submodule "fortnox_openapi"]
+	path = fortnox_openapi
+	url = git@github.com:rsystem-se/fortnox_openapi.git
