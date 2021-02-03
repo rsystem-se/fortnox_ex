@@ -22,6 +22,7 @@ Not used in production. Untested to most degree. Help wanted. Rate limiting is t
 * Currency
 * Customer
 * Employee
+* Expense
 * Invoice (actions not implemented)
 * Offer (actions not implemented)
 * Order (actions not implemented)
@@ -41,7 +42,6 @@ Not used in production. Untested to most degree. Help wanted. Rate limiting is t
 * Contract Template
 * Cost Center
 * Digital Receipt
-* Expense
 * Financial Year
 * Inbox
 * Invoice Accrual
