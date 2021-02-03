@@ -46,6 +46,7 @@ defmodule FortnoxEx.MixProject do
   defp deps do
     [
       {:tesla, "~> 1.4.0"},
+      {:fuse, "~> 2.4"},
       {:hackney, "~> 1.17.0"},
       {:jason, ">= 1.0.0"},
       {:ex_doc, "~> 0.21", only: :dev}

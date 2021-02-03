@@ -1,6 +1,12 @@
 defmodule FortnoxEx.Utils do
+  @moduledoc nil
+
   @doc """
   Builds an authenticated client. Requires that you already have an access token for the client secret.
+
+  The client uses fuse for rate limiting. Rate limiting is bound to the access token of the client.
+  Read more about Fortnox rate limiting here.
+  https://developer.fortnox.se/general/regarding-fortnox-api-rate-limits/
   """
   def client(client_secret, access_token) do
     headers = [
@@ -10,9 +16,20 @@ defmodule FortnoxEx.Utils do
 
     middleware = [
       {Tesla.Middleware.BaseUrl, "https://api.fortnox.se"},
-      {Tesla.Middleware.Logger, debug: true},
+      {Tesla.Middleware.Logger, debug: false},
       {Tesla.Middleware.Headers, headers},
-      Tesla.Middleware.JSON
+      Tesla.Middleware.JSON,
+      {
+        Tesla.Middleware.Fuse,
+        name: access_token,
+        opts: {{:standard, 200, 60_000}, {:reset, 60_000}},
+        keep_original_error: false,
+        should_melt: fn
+          {:ok, %{status: status}} when status in [429] -> true
+          {:ok, _} -> false
+          {:error, _} -> false
+        end
+      }
     ]
 
     adapter = {Tesla.Adapter.Hackney, [recv_timeout: 30_000]}

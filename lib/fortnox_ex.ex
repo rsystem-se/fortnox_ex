@@ -1,6 +1,10 @@
 defmodule FortnoxEx do
   @moduledoc """
   Documentation for `FortnoxEx`.
+
+  API calls are rate limited with Fuse for 200 calls per minute. Should the rate limiting be blown, then the
+  rate limiter will refresh in 60 seconds. If the fuse is blown and rate limiter is hit, then the result of any api call
+  will be {:error, :unavailable}
   """
 
   alias FortnoxEx.Utils
