@@ -10,14 +10,28 @@ defmodule FortnoxEx.Model.CustomerPartial do
   @derive [Poison.Encoder]
   defstruct [
     :"@url",
+    :"Address1",
+    :"Address2",
+    :"City",
+    :"CustomerNumber",
+    :"Email",
     :"Name",
-    :"Address"
+    :"OrganisationNumber",
+    :"Phone",
+    :"ZipCode"
   ]
 
   @type t :: %__MODULE__{
     :"@url" => String.t | nil,
+    :"Address1" => String.t | nil,
+    :"Address2" => String.t | nil,
+    :"City" => String.t | nil,
+    :"CustomerNumber" => String.t | nil,
+    :"Email" => String.t | nil,
     :"Name" => String.t | nil,
-    :"Address" => String.t | nil
+    :"OrganisationNumber" => String.t | nil,
+    :"Phone" => String.t | nil,
+    :"ZipCode" => String.t | nil
   }
 end
 
