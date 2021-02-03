@@ -1,4 +1,4 @@
-defmodule FortnoxEx.Models.CurrencyTest do
+defmodule FortnoxEx.Models.CustomerTest do
   @moduledoc nil
   use ExUnit.Case
 
@@ -30,7 +30,7 @@ defmodule FortnoxEx.Models.CurrencyTest do
       client = FortnoxEx.client(client_secret(), access_token())
       stream = FortnoxEx.stream_currencys(client, [limit: 5])
       [first | _] = Enum.to_list(stream)
-      assert first["CurrencyNumber"] == "1"
+      assert first["CustomerNumber"] == "1"
     end
   end
 
@@ -39,7 +39,7 @@ defmodule FortnoxEx.Models.CurrencyTest do
     test "fetches a currency" do
       client = FortnoxEx.client(client_secret(), access_token())
       {:ok, currency} = FortnoxEx.get_currency(client, "1")
-      assert currency["CurrencyNumber"] == "1"
+      assert currency["CustomerNumber"] == "1"
     end
   end
 
