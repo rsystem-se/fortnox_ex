@@ -58,7 +58,7 @@ defmodule FortnoxEx.Models.InvoicePayment do
     iex> get_invoice_payment(client, "1")
     {:ok, %{"InvoicePaymentNumber" => "1", "Name" => "Johnny", ...}
 
-    iex> get_invoice_payment(clientm "1")
+    iex> get_invoice_payment(client, "1")
     {:error, fortnox_error}
 
   """
