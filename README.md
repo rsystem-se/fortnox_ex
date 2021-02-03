@@ -22,6 +22,60 @@ Not used in production. Untested to most degree. Help wanted. Rate limiting is t
 * Order (actions not implemented)
 * Project (actions not implemented)
 
+**NOT SUPPORTED YET - HELP WANTED**
+* Absence Transaction
+* Account Chart
+* Account
+* Archive
+* Article File Connection
+* Asset Type
+* Asset
+* Company Information
+* Company Setting
+* Contract Accrual
+* Contract Template
+* Cost Center
+* Currency
+* Digital Receipt
+* Expense
+* Financial Year
+* Inbox
+* Invoice Accrual
+* Invoice File Connection
+* Invoice Payment
+* Label
+* Locked Period
+* Mode of Payment
+* Nox Finans Invoice
+* Predefined Account
+* Predefined Voucher Serie
+* Price List
+* Print Template
+* Salary Transaction
+* Schedule Time
+* SIE
+* Supplier Invoice Accrual
+* Supplier Invoice External URL Connection
+* Supplier Invoice File Connection
+* Supplier Invoice Payment
+* Supplier Invoice
+* Supplier
+* Tax Reduction
+* Term of Delivery
+* Term of Payment
+* Trusted Email Domain
+* Trusted Email Sender
+* Unit
+* Voucher File Connection
+* Voucher Serie
+* Voucher
+* Warehouse Custom Inbound Document
+* Warehouse Custom Outbound Document
+* Warehouse Information
+* Warehouse Item Summary
+* Warehouse Resource Specific Field
+* Way of Delivery
+
 ## Features for all models
 
 * Create
