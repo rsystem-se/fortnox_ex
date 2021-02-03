@@ -97,3 +97,7 @@ def deps do
   ]
 end
 ```
+
+# Contributors
+
+* Nils Ivanson
