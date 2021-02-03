@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
+- authorization code to access token
 - authentication
 - fuse rate limiting
 - hackney
