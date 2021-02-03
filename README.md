@@ -1,6 +1,6 @@
 # FortnoxEx
 
-API Client for Fortnox. For more details about Fortnox API, please see
+Unofficial API Client for Fortnox. For more details about Fortnox API, please see
 [https://developer.fortnox.se/documentation/](https://developer.fortnox.se/documentation/)
 
 The documentation for FortnoxEx can be found at
