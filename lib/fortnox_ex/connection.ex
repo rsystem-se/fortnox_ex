@@ -44,4 +44,54 @@ defmodule FortnoxEx.Connection do
     adapter = {Tesla.Adapter.Hackney, [recv_timeout: 30_000]}
     Tesla.client(middleware, adapter)
   end
+
+  @doc """
+  Gets an access token given a client secret and an authorization code
+
+  ## Examples
+
+    iex> get_access_token(client_secret, authorization_code)
+    {:ok, "65cc2c87-de81-45d6-c792-aad68528ff17"}
+
+    iex> get_access_token(client_secret, authorization_code)
+    {:error, %{"Code" => 2000721, "Error" => 1, "Message" => "Auktoriseringskoden är redan förbrukad."}}
+
+  """
+  @spec get_access_token(String.t, String.t) :: {:ok, String.t}
+  def get_access_token(client_secret, authorization_code) do
+    headers = [
+      {"Client-Secret", client_secret},
+      {"Authorization-Code", authorization_code}
+    ]
+
+    middleware = [
+      {Tesla.Middleware.BaseUrl, "https://api.fortnox.se/3"},
+      {Tesla.Middleware.Logger, debug: false},
+      {Tesla.Middleware.Headers, headers},
+      {Tesla.Middleware.EncodeJson, engine: Poison},
+    ]
+
+    adapter = {Tesla.Adapter.Hackney, [recv_timeout: 30_000]}
+    client = Tesla.client(middleware, adapter)
+
+    Tesla.get(client, "/customers")
+    |> handle_authorization_response()
+  end
+
+  defp handle_authorization_response({:ok, env}) do
+    env
+    |> Map.get(:body)
+    |> Poison.decode!()
+    |> case do
+         %{
+           "Authorization" => %{
+             "AccessToken" => access_token
+           }
+         } -> {:ok, access_token}
+         error -> {:error, error}
+       end
+
+  end
+
+  defp handle_authorization_response(error), do: error
 end
