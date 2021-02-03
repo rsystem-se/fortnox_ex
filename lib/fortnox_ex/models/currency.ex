@@ -1,4 +1,4 @@
-defmodule FortnoxEx.Models.Customer do
+defmodule FortnoxEx.Models.Currency do
   import FortnoxEx.Utils, only: [process_response: 2, stream_resource: 3]
 
   @doc """
@@ -7,15 +7,15 @@ defmodule FortnoxEx.Models.Customer do
   ## Examples
 
     iex> create_currency(client, %{"Name" => "ACME")
-    {:ok, %{"CustomerNumber" => "1", "Name" => "ACME"}}
+    {:ok, %{"CurrencyNumber" => "1", "Name" => "ACME"}}
 
     iex> create_currency(client, currency_attrs)
     {:error, fortnox_error}
 
   """
   def create_currency(client, currency_data) do
-    Tesla.post(client, "/3/currencys", %{"Customer" => currency_data})
-    |> process_response("Customer")
+    Tesla.post(client, "/3/currencys", %{"Currency" => currency_data})
+    |> process_response("Currency")
   end
 
   @doc """
@@ -24,14 +24,14 @@ defmodule FortnoxEx.Models.Customer do
   ## Examples
 
     iex> list_currencys(client, [])
-    {:ok, %{"@CurrentPage" => 1, "@TotalPages" => 1, "@TotalResources" => 1}, [%{"CustomerNumber" => "1", "Name" => "ACME"}]}
+    {:ok, %{"@CurrentPage" => 1, "@TotalPages" => 1, "@TotalResources" => 1}, [%{"CurrencyNumber" => "1", "Name" => "ACME"}]}
 
     iex> list_currencys(client, [])
     {:error, fortnox_error}
   """
   def list_currencys(client, query) do
     Tesla.get(client, "/3/currencys", query: query)
-    |> process_response("Customers")
+    |> process_response("Currencys")
   end
 
   @doc """
@@ -56,7 +56,7 @@ defmodule FortnoxEx.Models.Customer do
   ## Examples
 
     iex> get_currency(client, "1")
-    {:ok, %{"CustomerNumber" => "1", "Name" => "Johnny", ...}
+    {:ok, %{"CurrencyNumber" => "1", "Name" => "Johnny", ...}
 
     iex> get_currency(clientm "1")
     {:error, fortnox_error}
@@ -64,7 +64,7 @@ defmodule FortnoxEx.Models.Customer do
   """
   def get_currency(client, currency_number) do
     Tesla.get(client, "/3/currencys/#{currency_number}")
-    |> process_response("Customer")
+    |> process_response("Currency")
   end
 
   @doc """
@@ -73,15 +73,15 @@ defmodule FortnoxEx.Models.Customer do
   ## Examples
 
     iex> update_currency(client, "1", %{"Name" => "Johnny"})
-    {:ok, %{"CustomerNumber" => "1", "Name" => "Johnny", ...}
+    {:ok, %{"CurrencyNumber" => "1", "Name" => "Johnny", ...}
 
     iex> update_currency(clientm "1", currency_attrs)
     {:error, fortnox_error}
 
   """
   def update_currency(client, currency_number, currency_data) do
-    Tesla.put(client, "/3/currencys/#{currency_number}", %{"Customer" => currency_data})
-    |> process_response("Customer")
+    Tesla.put(client, "/3/currencys/#{currency_number}", %{"Currency" => currency_data})
+    |> process_response("Currency")
   end
 
   @doc """

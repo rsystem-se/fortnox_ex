@@ -1,4 +1,4 @@
-defmodule FortnoxEx.Models.CustomerTest do
+defmodule FortnoxEx.Models.CurrencyTest do
   @moduledoc nil
   use ExUnit.Case
 
@@ -6,57 +6,57 @@ defmodule FortnoxEx.Models.CustomerTest do
   defp access_token, do: System.fetch_env!("ACCESS_TOKEN")
 
   @tag :skip
-  describe "create_customer/2" do
-    test "creates a customer" do
+  describe "create_currency/2" do
+    test "creates a currency" do
       client = FortnoxEx.client(client_secret(), access_token())
-      {:ok, customer} = FortnoxEx.create_customer(client, %{"Name" => "Test Corporation"})
-      assert customer["Name"] == "Test Corporation"
+      {:ok, currency} = FortnoxEx.create_currency(client, %{"Name" => "Test Corporation"})
+      assert currency["Name"] == "Test Corporation"
     end
   end
 
   @tag :skip
-  describe "list_customers/2" do
-    test "fetches customers" do
+  describe "list_currencys/2" do
+    test "fetches currencys" do
       client = FortnoxEx.client(client_secret(), access_token())
-      {:ok, meta, customers} = FortnoxEx.list_customers(client, [])
+      {:ok, meta, currencys} = FortnoxEx.list_currencys(client, [])
       assert meta == %{"@CurrentPage" => 1, "@TotalPages" => 0, "@TotalResources" => 0}
-      assert Enum.count(customers) == 0
+      assert Enum.count(currencys) == 0
     end
   end
 
   @tag :skip
-  describe "stream_customers/2" do
-    test "streams customers" do
+  describe "stream_currencys/2" do
+    test "streams currencys" do
       client = FortnoxEx.client(client_secret(), access_token())
-      stream = FortnoxEx.stream_customers(client, [limit: 5])
+      stream = FortnoxEx.stream_currencys(client, [limit: 5])
       [first | _] = Enum.to_list(stream)
-      assert first["CustomerNumber"] == "1"
+      assert first["CurrencyNumber"] == "1"
     end
   end
 
   @tag :skip
-  describe "get_customer/2" do
-    test "fetches a customer" do
+  describe "get_currency/2" do
+    test "fetches a currency" do
       client = FortnoxEx.client(client_secret(), access_token())
-      {:ok, customer} = FortnoxEx.get_customer(client, "1")
-      assert customer["CustomerNumber"] == "1"
+      {:ok, currency} = FortnoxEx.get_currency(client, "1")
+      assert currency["CurrencyNumber"] == "1"
     end
   end
 
   @tag :skip
-  describe "update_customer/2" do
-    test "updates a customer" do
+  describe "update_currency/2" do
+    test "updates a currency" do
       client = FortnoxEx.client(client_secret(), access_token())
-      {:ok, customer} = FortnoxEx.update_customer(client, "1", %{"Name" => "Test Corporation"})
-      assert customer["Name"] == "Test Corporation"
+      {:ok, currency} = FortnoxEx.update_currency(client, "1", %{"Name" => "Test Corporation"})
+      assert currency["Name"] == "Test Corporation"
     end
   end
 
   @tag :skip
-  describe "delete_customer/2" do
-    test "deletes a customer" do
+  describe "delete_currency/2" do
+    test "deletes a currency" do
       client = FortnoxEx.client(client_secret(), access_token())
-      :ok = FortnoxEx.delete_customer(client, "1")
+      :ok = FortnoxEx.delete_currency(client, "1")
     end
   end
 end
