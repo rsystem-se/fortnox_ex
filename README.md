@@ -13,6 +13,7 @@ Not used in production. Untested to most degree. Help wanted. Rate limiting is t
 ## Models
 
 * Absence Transaction
+* Account
 * Articles
 * Attendance Transaction
 * Contract
@@ -27,7 +28,6 @@ Not used in production. Untested to most degree. Help wanted. Rate limiting is t
 
 **NOT SUPPORTED YET - HELP WANTED**
 * Account Chart
-* Account
 * Archive
 * Article File Connection
 * Asset Type
