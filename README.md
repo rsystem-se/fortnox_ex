@@ -37,6 +37,7 @@ Not used in production. Untested to most degree. Help wanted. Rate limiting is t
 * Terms of Delivery
 * Terms of Payment
 * Unit
+* Way of Delivery
 
 **NOT SUPPORTED YET - HELP WANTED**
 * Archive
@@ -74,7 +75,6 @@ Not used in production. Untested to most degree. Help wanted. Rate limiting is t
 * Warehouse Information
 * Warehouse Item Summary
 * Warehouse Resource Specific Field
-* Way of Delivery
 
 ## Features
 

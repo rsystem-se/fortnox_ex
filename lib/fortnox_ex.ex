@@ -179,4 +179,11 @@ defmodule FortnoxEx do
   defdelegate get_unit(client, unit_number), to: Models.Unit
   defdelegate update_unit(client, unit_number, unit_attrs), to: Models.Unit
   defdelegate delete_unit(client, unit_number), to: Models.Unit
+
+  defdelegate create_way_of_delivery(client, way_of_delivery_attrs), to: Models.WayOfDelivery
+  defdelegate list_way_of_deliverys(client, query), to: Models.WayOfDelivery
+  defdelegate stream_way_of_deliverys(client, query), to: Models.WayOfDelivery
+  defdelegate get_way_of_delivery(client, way_of_delivery_code), to: Models.WayOfDelivery
+  defdelegate update_way_of_delivery(client, way_of_delivery_code, way_of_delivery_attrs), to: Models.WayOfDelivery
+  defdelegate delete_way_of_delivery(client, way_of_delivery_code), to: Models.WayOfDelivery
 end
