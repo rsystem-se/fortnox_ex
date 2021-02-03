@@ -6,11 +6,16 @@ API Client for Fortnox. For more details about Fortnox API, please see
 The documentation for FortnoxEx can be found at
 [https://hexdocs.pm/fortnox_ex](https://hexdocs.pm/fortnox_ex)
 
-## Resources
+## Models
 
+* Articles
+* Contract
 * Customer
+* Invoice (actions not implemented)
+* Offer (actions not implemented)
+* Order (actions not implemented)
 
-## Features for all resources
+## Features for all models
 
 * Create
 * List

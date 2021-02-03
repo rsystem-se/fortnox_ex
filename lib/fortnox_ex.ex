@@ -8,10 +8,27 @@ defmodule FortnoxEx do
   """
 
   alias FortnoxEx.Utils
-  alias FortnoxEx.Models.Customer
+  alias FortnoxEx.Models.{Article, Contract, Customer, Invoice, Offer, Order}
 
   defdelegate get_access_token(client_secret, authorization_code), to: Utils
   defdelegate client(client_secret, access_token), to: Utils
+
+  defdelegate create_article(client, article_attrs), to: Article
+  defdelegate list_articles(client, query), to: Article
+  defdelegate stream_articles(client, query), to: Article
+  defdelegate get_article(client, article_number), to: Article
+  defdelegate update_article(client, article_number, article_attrs), to: Article
+  defdelegate delete_article(client, article_number), to: Article
+
+  defdelegate create_contract(client, contract_attrs), to: Contract
+  defdelegate list_contracts(client, query), to: Contract
+  defdelegate stream_contracts(client, query), to: Contract
+  defdelegate get_contract(client, contract_number), to: Contract
+  defdelegate update_contract(client, contract_number, contract_attrs), to: Contract
+  defdelegate create_invoice_for_contract(client, contract_number), to: Contract
+  defdelegate increase_invoice_count_for_contract(client, contract_number), to: Contract
+  defdelegate finish_contract(client, contract_number), to: Contract
+  defdelegate delete_contract(client, contract_number), to: Contract
 
   defdelegate create_customer(client, customer_attrs), to: Customer
   defdelegate list_customers(client, query), to: Customer
@@ -19,4 +36,25 @@ defmodule FortnoxEx do
   defdelegate get_customer(client, customer_number), to: Customer
   defdelegate update_customer(client, customer_number, customer_attrs), to: Customer
   defdelegate delete_customer(client, customer_number), to: Customer
+
+  defdelegate create_invoice(client, invoice_attrs), to: Invoice
+  defdelegate list_invoices(client, query), to: Invoice
+  defdelegate stream_invoices(client, query), to: Invoice
+  defdelegate get_invoice(client, invoice_number), to: Invoice
+  defdelegate update_invoice(client, invoice_number, invoice_attrs), to: Invoice
+  defdelegate delete_invoice(client, invoice_number), to: Invoice
+
+  defdelegate create_offer(client, offer_attrs), to: Offer
+  defdelegate list_offers(client, query), to: Offer
+  defdelegate stream_offers(client, query), to: Offer
+  defdelegate get_offer(client, offer_number), to: Offer
+  defdelegate update_offer(client, offer_number, offer_attrs), to: Offer
+  defdelegate delete_offer(client, offer_number), to: Offer
+
+  defdelegate create_order(client, order_attrs), to: Order
+  defdelegate list_orders(client, query), to: Order
+  defdelegate stream_orders(client, query), to: Order
+  defdelegate get_order(client, order_number), to: Order
+  defdelegate update_order(client, order_number, order_attrs), to: Order
+  defdelegate delete_order(client, order_number), to: Order
 end
