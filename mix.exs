@@ -1,7 +1,7 @@
 defmodule FortnoxEx.Mixfile do
   use Mix.Project
 
-  @version "0.4.1"
+  @version "0.4.2"
   @github_url "https://github.com/rsystem-se/fortnox_ex"
 
   def project do

@@ -32,7 +32,7 @@ by adding `fortnox_ex` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
-  [{:fortnox_ex, "~> 0.4.0"}]
+  [{:fortnox_ex, "~> 0.4.2"}]
 end
 ```
 
