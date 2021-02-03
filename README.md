@@ -1,6 +1,22 @@
 # FortnoxEx
 
-**TODO: Add description**
+API Client for Fortnox. For more details about Fortnox API, please see
+[https://developer.fortnox.se/documentation/](https://developer.fortnox.se/documentation/)
+
+The documentation for FortnoxEx can be found at
+[https://hexdocs.pm/fortnox_ex](https://hexdocs.pm/fortnox_ex)
+
+## Resources
+
+* Customer
+
+## Features for all resources
+
+* Create
+* List
+* Stream (all pages for paginated list results)
+* Update
+* Delete
 
 ## Installation
 
@@ -14,8 +30,3 @@ def deps do
   ]
 end
 ```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/fortnox_ex](https://hexdocs.pm/fortnox_ex).
-
