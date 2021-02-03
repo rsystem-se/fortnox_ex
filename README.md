@@ -27,6 +27,7 @@ Not used in production. Untested to most degree. Help wanted. Rate limiting is t
 * Offer (actions not implemented)
 * Order (actions not implemented)
 * Price List
+* Print Template
 * Project (actions not implemented)
 * Supplier
 * Supplier Invoice
@@ -53,7 +54,6 @@ Not used in production. Untested to most degree. Help wanted. Rate limiting is t
 * Nox Finans Invoice
 * Predefined Account
 * Predefined Voucher Serie
-* Print Template
 * Salary Transaction
 * Schedule Time
 * SIE
