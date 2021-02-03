@@ -1,0 +1,14 @@
+.gitignore
+.openapi-generator-ignore
+README.md
+config/config.exs
+lib/fortnox_ex/api/default.ex
+lib/fortnox_ex/connection.ex
+lib/fortnox_ex/deserializer.ex
+lib/fortnox_ex/model/customer.ex
+lib/fortnox_ex/model/customer_list.ex
+lib/fortnox_ex/model/customer_partial.ex
+lib/fortnox_ex/model/meta_information.ex
+lib/fortnox_ex/request_builder.ex
+mix.exs
+test/test_helper.exs

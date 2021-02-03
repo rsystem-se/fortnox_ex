@@ -9,13 +9,21 @@ Built from Unofficial OpenAPI Specification at
 The documentation for FortnoxEx can be found at
 [https://hexdocs.pm/fortnox_ex](https://hexdocs.pm/fortnox_ex)
 
-## Missing or incorrect features
+### Missing or incorrect features
 
 Please see the specification at https://github.com/rsystem-se/fortnox_openapi before opening any issues in this repository.
 
-## Stability and Quality of this library
+### Stability and Quality of this library
 
 Not used in production. Untested to most degree. Help wanted. Rate limiting is tested. Use with caution.
+
+### Building
+
+To install the required dependencies and to build the elixir project, run:
+```
+mix local.hex --force
+mix do deps.get, compile
+```
 
 ## Installation
 
@@ -24,12 +32,10 @@ by adding `fortnox_ex` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
-  [
-    {:fortnox_ex, "~> 0.3.0"}
-  ]
+  [{:fortnox_ex, "~> 0.4.0"}]
 end
 ```
 
-# Contributors
-
-* Nils Ivanson
+Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
+and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
+be found at [https://hexdocs.pm/fortnox_ex](https://hexdocs.pm/fortnox_ex).
