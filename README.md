@@ -76,13 +76,14 @@ Not used in production. Untested to most degree. Help wanted. Rate limiting is t
 * Warehouse Resource Specific Field
 * Way of Delivery
 
-## Features for all models
+## Features
 
 * Create
 * List
 * Stream (all pages for paginated list results)
 * Update
 * Delete
+* Actions
 
 ## Installation
 
