@@ -14,6 +14,7 @@ Not used in production. Untested to most degree. Help wanted. Rate limiting is t
 
 * Absence Transaction
 * Account
+* Account Chart
 * Articles
 * Asset (actions not implemented)
 * Attendance Transaction
@@ -29,7 +30,6 @@ Not used in production. Untested to most degree. Help wanted. Rate limiting is t
 * Unit
 
 **NOT SUPPORTED YET - HELP WANTED**
-* Account Chart
 * Archive
 * Article File Connection
 * Asset Type
