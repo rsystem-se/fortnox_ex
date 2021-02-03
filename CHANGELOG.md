@@ -6,6 +6,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
+- authentication
+- fuse rate limiting
+- hackney
+
+## [0.4.1]
+### Fixed
+- get_customer_by_customer_number model
+- list_customers model
+
+## [0.4.0]
+### Added
 - get_customer_by_customer_number
 - list_customers
 

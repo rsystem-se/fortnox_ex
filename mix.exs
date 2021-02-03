@@ -1,7 +1,7 @@
 defmodule FortnoxEx.Mixfile do
   use Mix.Project
 
-  @version "0.4.0"
+  @version "0.4.1"
   @github_url "https://github.com/rsystem-se/fortnox_ex"
 
   def project do
@@ -37,6 +37,8 @@ defmodule FortnoxEx.Mixfile do
   defp deps do
     [
       {:tesla, "~> 1.2"},
+      {:fuse, "~> 2.4"},
+      {:hackney, "~> 1.17.0"},
       {:poison, "~> 3.0"},
       {:ex_doc, ">= 0.0.0", only: :dev, runtime: false},
     ]
