@@ -101,6 +101,12 @@ defmodule FortnoxEx do
   defdelegate update_label(client, label_number, label_attrs), to: Models.Label
   defdelegate delete_label(client, label_number), to: Models.Label
 
+  defdelegate create_modes_of_payment(client, modes_of_payment_attrs), to: Models.ModesOfPayment
+  defdelegate list_modes_of_payments(client, query), to: Models.ModesOfPayment
+  defdelegate stream_modes_of_payments(client, query), to: Models.ModesOfPayment
+  defdelegate get_modes_of_payment(client, modes_of_payment_code), to: Models.ModesOfPayment
+  defdelegate update_modes_of_payment(client, modes_of_payment_code, modes_of_payment_attrs), to: Models.ModesOfPayment
+
   defdelegate create_offer(client, offer_attrs), to: Models.Offer
   defdelegate list_offers(client, query), to: Models.Offer
   defdelegate stream_offers(client, query), to: Models.Offer

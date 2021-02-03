@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Expense
 - Print Template
 - Label
+- Modes of Payment
+
 ### Fixed
 - Typoes with currency that shoud be currencies
 - Files for customer and currency were mixed up

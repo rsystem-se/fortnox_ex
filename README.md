@@ -25,6 +25,7 @@ Not used in production. Untested to most degree. Help wanted. Rate limiting is t
 * Expense
 * Invoice (actions not implemented)
 * Label
+* Modes of Payment
 * Offer (actions not implemented)
 * Order (actions not implemented)
 * Price List
@@ -50,7 +51,6 @@ Not used in production. Untested to most degree. Help wanted. Rate limiting is t
 * Invoice File Connection
 * Invoice Payment
 * Locked Period
-* Mode of Payment
 * Nox Finans Invoice
 * Predefined Account
 * Predefined Voucher Serie
