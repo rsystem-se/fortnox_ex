@@ -9,7 +9,8 @@ defmodule FortnoxEx do
 
   alias FortnoxEx.Utils
   alias FortnoxEx.Models.{AbsenceTransaction, Account, AccountChart, Article, Asset, AttendanceTransaction, Contract,
-                          Customer, Employee, Invoice, Offer, Order, Project, Supplier, SupplierInvoice, Unit}
+                          Customer, Employee, Invoice, Offer, Order, PriceList, Project, Supplier, SupplierInvoice,
+                          Unit}
 
   defdelegate get_access_token(client_secret, authorization_code), to: Utils
   defdelegate client(client_secret, access_token), to: Utils
@@ -97,6 +98,13 @@ defmodule FortnoxEx do
   defdelegate get_order(client, order_number), to: Order
   defdelegate update_order(client, order_number, order_attrs), to: Order
   defdelegate delete_order(client, order_number), to: Order
+
+  defdelegate create_price_list(client, price_list_attrs), to: PriceList
+  defdelegate list_price_lists(client, query), to: PriceList
+  defdelegate stream_price_lists(client, query), to: PriceList
+  defdelegate get_price_list(client, price_list_number), to: PriceList
+  defdelegate update_price_list(client, price_list_number, price_list_attrs), to: PriceList
+  defdelegate delete_price_list(client, price_list_number), to: PriceList
 
   defdelegate create_project(client, project_attrs), to: Project
   defdelegate list_projects(client, query), to: Project
