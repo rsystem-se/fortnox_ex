@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Supplier Invoice
 - Account
 - Unit
+- Assets
 
 ## [0.2.0] - 2021-02-03
 ### Added

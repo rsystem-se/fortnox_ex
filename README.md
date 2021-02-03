@@ -15,6 +15,7 @@ Not used in production. Untested to most degree. Help wanted. Rate limiting is t
 * Absence Transaction
 * Account
 * Articles
+* Asset (actions not implemented)
 * Attendance Transaction
 * Contract
 * Customer
@@ -32,7 +33,6 @@ Not used in production. Untested to most degree. Help wanted. Rate limiting is t
 * Archive
 * Article File Connection
 * Asset Type
-* Asset
 * Company Information
 * Company Setting
 * Contract Accrual
