@@ -5,14 +5,16 @@ defmodule FortnoxEx.Utils do
   def client(client_secret, access_token) do
     headers = [
       {"Client-Secret", client_secret},
-      {"Access-Token", access_token},
+      {"Access-Token", access_token}
     ]
+
     middleware = [
       {Tesla.Middleware.BaseUrl, "https://api.fortnox.se"},
       {Tesla.Middleware.Logger, debug: true},
       {Tesla.Middleware.Headers, headers},
-      Tesla.Middleware.JSON,
+      Tesla.Middleware.JSON
     ]
+
     adapter = {Tesla.Adapter.Hackney, [recv_timeout: 30_000]}
     Tesla.client(middleware, adapter)
   end
@@ -32,22 +34,25 @@ defmodule FortnoxEx.Utils do
   def get_access_token(client_secret, authorization_code) do
     headers = [
       {"Client-Secret", client_secret},
-      {"Authorization-Code", authorization_code},
+      {"Authorization-Code", authorization_code}
     ]
+
     middleware = [
       {Tesla.Middleware.BaseUrl, "https://api.fortnox.se"},
       {Tesla.Middleware.Logger, debug: false},
       {Tesla.Middleware.Headers, headers},
-      Tesla.Middleware.JSON,
+      Tesla.Middleware.JSON
     ]
+
     adapter = {Tesla.Adapter.Hackney, [recv_timeout: 30_000]}
     client = Tesla.client(middleware, adapter)
+
     Tesla.get(client, "/3/customers")
     |> process_response("Authorization")
     |> case do
-         {:ok, %{"AccessToken" => access_token}} -> {:ok, access_token}
-         error -> error
-       end
+      {:ok, %{"AccessToken" => access_token}} -> {:ok, access_token}
+      error -> error
+    end
   end
 
   @doc """
@@ -61,10 +66,12 @@ defmodule FortnoxEx.Utils do
       error -> {:error, error}
     end
   end
+
   def process_response(error, _key), do: error
 
   defp extract_with_or_without_meta_information(body, key) do
     value = Map.fetch!(body, key)
+
     case Map.get(body, "MetaInformation") do
       nil -> {:ok, value}
       meta_information -> {:ok, meta_information, value}
