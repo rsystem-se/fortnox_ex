@@ -1,13 +1,20 @@
 defmodule FortnoxEx.Mixfile do
   use Mix.Project
 
+  @version "0.4.0"
+  @github_url "https://github.com/rsystem-se/fortnox_ex"
+
   def project do
-    [app: :fortnox_ex,
-     version: "0.4.0",
-     elixir: "~> 1.6",
-     build_embedded: Mix.env == :prod,
-     start_permanent: Mix.env == :prod,
-     deps: deps()]
+    [
+      app: :fortnox_ex,
+      description: "FortnoxEx is an unofficial API client for Fortnox",
+      version: @version,
+      elixir: "~> 1.6",
+      build_embedded: Mix.env == :prod,
+      start_permanent: Mix.env == :prod,
+      deps: deps(),
+      package: package(),
+    ]
   end
 
   # Configuration for the OTP application
@@ -30,7 +37,18 @@ defmodule FortnoxEx.Mixfile do
   defp deps do
     [
       {:tesla, "~> 1.2"},
-      {:poison, "~> 3.0"}
+      {:poison, "~> 3.0"},
+      {:ex_doc, ">= 0.0.0", only: :dev, runtime: false},
+    ]
+  end
+
+  defp package do
+    [
+      maintainers: ["Nils Ivanson"],
+      licenses: ["MIT"],
+      links: %{
+        "GitHub" => @github_url
+      }
     ]
   end
 end
