@@ -8,10 +8,17 @@ defmodule FortnoxEx do
   """
 
   alias FortnoxEx.Utils
-  alias FortnoxEx.Models.{Article, AttendanceTransaction, Contract, Customer, Invoice, Offer, Order}
+  alias FortnoxEx.Models.{AbsenceTransaction, Article, AttendanceTransaction, Contract, Customer, Invoice, Offer, Order}
 
   defdelegate get_access_token(client_secret, authorization_code), to: Utils
   defdelegate client(client_secret, access_token), to: Utils
+
+  defdelegate create_absence_transaction(client, absence_transaction_attrs), to: AbsenceTransaction
+  defdelegate list_absence_transactions(client, query), to: AbsenceTransaction
+  defdelegate stream_absence_transactions(client, query), to: AbsenceTransaction
+  defdelegate get_absence_transaction(client, absence_transaction_number), to: AbsenceTransaction
+  defdelegate update_absence_transaction(client, absence_transaction_number, absence_transaction_attrs), to: AbsenceTransaction
+  defdelegate delete_absence_transaction(client, absence_transaction_number), to: AbsenceTransaction
 
   defdelegate create_article(client, article_attrs), to: Article
   defdelegate list_articles(client, query), to: Article
