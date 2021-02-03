@@ -9,7 +9,7 @@ defmodule FortnoxEx do
 
   alias FortnoxEx.Utils
   alias FortnoxEx.Models.{AbsenceTransaction, Article, AttendanceTransaction, Contract, Customer, Employee, Invoice,
-                          Offer, Order, Project, Supplier}
+                          Offer, Order, Project, Supplier, SupplierInvoice}
 
   defdelegate get_access_token(client_secret, authorization_code), to: Utils
   defdelegate client(client_secret, access_token), to: Utils
@@ -95,4 +95,11 @@ defmodule FortnoxEx do
   defdelegate get_supplier(client, supplier_number), to: Supplier
   defdelegate update_supplier(client, supplier_number, supplier_attrs), to: Supplier
   defdelegate delete_supplier(client, supplier_number), to: Supplier
+
+  defdelegate create_supplier_invoice(client, supplier_invoice_attrs), to: SupplierInvoice
+  defdelegate list_supplier_invoices(client, query), to: SupplierInvoice
+  defdelegate stream_supplier_invoices(client, query), to: SupplierInvoice
+  defdelegate get_supplier_invoice(client, supplier_invoice_number), to: SupplierInvoice
+  defdelegate update_supplier_invoice(client, supplier_invoice_number, supplier_invoice_attrs), to: SupplierInvoice
+  defdelegate delete_supplier_invoice(client, supplier_invoice_number), to: SupplierInvoice
 end
