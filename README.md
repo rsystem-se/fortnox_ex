@@ -6,6 +6,10 @@ API Client for Fortnox. For more details about Fortnox API, please see
 The documentation for FortnoxEx can be found at
 [https://hexdocs.pm/fortnox_ex](https://hexdocs.pm/fortnox_ex)
 
+## Stability and Quality of this library
+
+Not used in production. Untested to most degree. Help wanted. Rate limiting is tested. Use with caution.
+
 ## Models
 
 * Articles
