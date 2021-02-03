@@ -25,6 +25,7 @@ Not used in production. Untested to most degree. Help wanted. Rate limiting is t
 * Project (actions not implemented)
 * Supplier
 * Supplier Invoice
+* Unit
 
 **NOT SUPPORTED YET - HELP WANTED**
 * Account Chart
@@ -65,7 +66,6 @@ Not used in production. Untested to most degree. Help wanted. Rate limiting is t
 * Term of Payment
 * Trusted Email Domain
 * Trusted Email Sender
-* Unit
 * Voucher File Connection
 * Voucher Serie
 * Voucher
