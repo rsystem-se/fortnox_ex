@@ -15,6 +15,7 @@ defmodule FortnoxEx do
 
   defdelegate create_customer(client, customer_attrs), to: Customer
   defdelegate list_customers(client, query), to: Customer
+  defdelegate stream_customers(client, query), to: Customer
   defdelegate get_customer(client, customer_number), to: Customer
   defdelegate update_customer(client, customer_number, customer_attrs), to: Customer
   defdelegate delete_customer(client, customer_number), to: Customer

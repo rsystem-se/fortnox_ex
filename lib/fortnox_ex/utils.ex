@@ -1,6 +1,8 @@
 defmodule FortnoxEx.Utils do
   @moduledoc nil
 
+  @streaming_api_calls_interval 1_000
+
   @doc """
   Builds an authenticated client. Requires that you already have an access token for the client secret.
 
@@ -67,9 +69,9 @@ defmodule FortnoxEx.Utils do
     Tesla.get(client, "/3/customers")
     |> process_response("Authorization")
     |> case do
-      {:ok, %{"AccessToken" => access_token}} -> {:ok, access_token}
-      error -> error
-    end
+         {:ok, %{"AccessToken" => access_token}} -> {:ok, access_token}
+         error -> error
+       end
   end
 
   @doc """
@@ -85,6 +87,37 @@ defmodule FortnoxEx.Utils do
   end
 
   def process_response(error, _key), do: error
+
+  def stream_resource(client, list_fn, query) do
+    first_page_query = Keyword.merge(query, [page: 1])
+    case list_fn.(client, first_page_query) do
+      {:ok, _, []} ->
+        []
+      {:ok, %{"@TotalPages" => 0}, _} ->
+        []
+      {:ok, %{"@TotalPages" => total_pages}, first_page_results} ->
+        stream_resource_remaining_pages(client, list_fn, query, total_pages, first_page_results)
+      _ ->
+        []
+    end
+  end
+
+  defp stream_resource_remaining_pages(client, list_fn, query, total_pages, first_page_results) do
+    1..total_pages
+    |> Stream.flat_map(
+         fn
+           1 ->
+             first_page_results
+           page ->
+             :timer.sleep(@streaming_api_calls_interval)
+             page_query = Keyword.merge(query, [page: page])
+             case list_fn.(client, page_query) do
+               {:ok, _, results} -> results
+               _ -> []
+             end
+         end
+       )
+  end
 
   defp extract_with_or_without_meta_information(body, key) do
     value = Map.fetch!(body, key)

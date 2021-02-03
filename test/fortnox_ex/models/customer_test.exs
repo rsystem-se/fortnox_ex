@@ -25,6 +25,16 @@ defmodule FortnoxEx.Models.CustomerTest do
   end
 
   @tag :skip
+  describe "stream_customers/2" do
+    test "streams customers" do
+      client = FortnoxEx.client(client_secret(), access_token())
+      stream = FortnoxEx.stream_customers(client, [limit: 5])
+      [first | _] = Enum.to_list(stream)
+      assert first["CustomerNumber"] == "1"
+    end
+  end
+
+  @tag :skip
   describe "get_customer/2" do
     test "fetches a customer" do
       client = FortnoxEx.client(client_secret(), access_token())
