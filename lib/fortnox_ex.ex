@@ -61,6 +61,8 @@ defmodule FortnoxEx do
   defdelegate finish_contract(client, contract_number), to: Models.Contract
   defdelegate delete_contract(client, contract_number), to: Models.Contract
 
+  defdelegate get_company_information(client), to: Models.CompanyInformation
+
   defdelegate create_currency(client, currency_attrs), to: Models.Currency
   defdelegate list_currencies(client, query), to: Models.Currency
   defdelegate stream_currencies(client, query), to: Models.Currency
