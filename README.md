@@ -62,8 +62,8 @@ Not used in production. Untested to most degree. Help wanted. Rate limiting is t
 * Supplier Invoice File Connection
 * Supplier Invoice Payment
 * Tax Reduction
-* Term of Delivery
-* Term of Payment
+* Terms of Delivery
+* Terms of Payment
 * Trusted Email Domain
 * Trusted Email Sender
 * Voucher File Connection
