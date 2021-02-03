@@ -94,6 +94,13 @@ defmodule FortnoxEx do
   defdelegate update_invoice(client, invoice_number, invoice_attrs), to: Models.Invoice
   defdelegate delete_invoice(client, invoice_number), to: Models.Invoice
 
+  defdelegate create_label(client, label_attrs), to: Models.Label
+  defdelegate list_labels(client, query), to: Models.Label
+  defdelegate stream_labels(client, query), to: Models.Label
+  defdelegate get_label(client, label_number), to: Models.Label
+  defdelegate update_label(client, label_number, label_attrs), to: Models.Label
+  defdelegate delete_label(client, label_number), to: Models.Label
+
   defdelegate create_offer(client, offer_attrs), to: Models.Offer
   defdelegate list_offers(client, query), to: Models.Offer
   defdelegate stream_offers(client, query), to: Models.Offer
