@@ -15,20 +15,20 @@ defmodule FortnoxEx.Models.CustomerTest do
   end
 
   @tag :skip
-  describe "list_currencys/2" do
-    test "fetches currencys" do
+  describe "list_currencies/2" do
+    test "fetches currencies" do
       client = FortnoxEx.client(client_secret(), access_token())
-      {:ok, meta, currencys} = FortnoxEx.list_currencys(client, [])
+      {:ok, meta, currencies} = FortnoxEx.list_currencies(client, [])
       assert meta == %{"@CurrentPage" => 1, "@TotalPages" => 0, "@TotalResources" => 0}
-      assert Enum.count(currencys) == 0
+      assert Enum.count(currencies) == 0
     end
   end
 
   @tag :skip
-  describe "stream_currencys/2" do
-    test "streams currencys" do
+  describe "stream_currencies/2" do
+    test "streams currencies" do
       client = FortnoxEx.client(client_secret(), access_token())
-      stream = FortnoxEx.stream_currencys(client, [limit: 5])
+      stream = FortnoxEx.stream_currencies(client, [limit: 5])
       [first | _] = Enum.to_list(stream)
       assert first["CustomerNumber"] == "1"
     end

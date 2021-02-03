@@ -14,7 +14,7 @@ defmodule FortnoxEx.Models.Currency do
 
   """
   def create_currency(client, currency_data) do
-    Tesla.post(client, "/3/currencys", %{"Currency" => currency_data})
+    Tesla.post(client, "/3/currencies", %{"Currency" => currency_data})
     |> process_response("Currency")
   end
 
@@ -23,14 +23,14 @@ defmodule FortnoxEx.Models.Currency do
 
   ## Examples
 
-    iex> list_currencys(client, [])
+    iex> list_currencies(client, [])
     {:ok, %{"@CurrentPage" => 1, "@TotalPages" => 1, "@TotalResources" => 1}, [%{"CurrencyNumber" => "1", "Name" => "ACME"}]}
 
-    iex> list_currencys(client, [])
+    iex> list_currencies(client, [])
     {:error, fortnox_error}
   """
-  def list_currencys(client, query) do
-    Tesla.get(client, "/3/currencys", query: query)
+  def list_currencies(client, query) do
+    Tesla.get(client, "/3/currencies", query: query)
     |> process_response("Currencys")
   end
 
@@ -40,14 +40,14 @@ defmodule FortnoxEx.Models.Currency do
 
   ## Examples
 
-    iex> stream_currencys(client, [])
-    stream_of_currencys
+    iex> stream_currencies(client, [])
+    stream_of_currencies
 
-    iex> stream_currencys(client, [])
+    iex> stream_currencies(client, [])
     {:error, fortnox_error}
   """
-  def stream_currencys(client, query) do
-    stream_resource(client, &list_currencys/2, query)
+  def stream_currencies(client, query) do
+    stream_resource(client, &list_currencies/2, query)
   end
 
   @doc """
@@ -63,7 +63,7 @@ defmodule FortnoxEx.Models.Currency do
 
   """
   def get_currency(client, currency_number) do
-    Tesla.get(client, "/3/currencys/#{currency_number}")
+    Tesla.get(client, "/3/currencies/#{currency_number}")
     |> process_response("Currency")
   end
 
@@ -80,7 +80,7 @@ defmodule FortnoxEx.Models.Currency do
 
   """
   def update_currency(client, currency_number, currency_data) do
-    Tesla.put(client, "/3/currencys/#{currency_number}", %{"Currency" => currency_data})
+    Tesla.put(client, "/3/currencies/#{currency_number}", %{"Currency" => currency_data})
     |> process_response("Currency")
   end
 
@@ -97,7 +97,7 @@ defmodule FortnoxEx.Models.Currency do
 
   """
   def delete_currency(client, currency_number) do
-    Tesla.delete(client, "/3/currencys/#{currency_number}")
+    Tesla.delete(client, "/3/currencies/#{currency_number}")
     |> process_response(nil)
   end
 end

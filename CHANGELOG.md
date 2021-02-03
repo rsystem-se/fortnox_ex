@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Expense
 - Print Template
+### Fixed
+- Typoes with currency that shoud be currencies
 
 ## [0.3.0] - 2021-02-03
 ### Added
