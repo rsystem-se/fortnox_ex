@@ -19,6 +19,7 @@ Not used in production. Untested to most degree. Help wanted. Rate limiting is t
 * Asset (actions not implemented)
 * Attendance Transaction
 * Contract
+* Currency
 * Customer
 * Employee
 * Invoice (actions not implemented)
@@ -39,7 +40,6 @@ Not used in production. Untested to most degree. Help wanted. Rate limiting is t
 * Contract Accrual
 * Contract Template
 * Cost Center
-* Currency
 * Digital Receipt
 * Expense
 * Financial Year
