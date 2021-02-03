@@ -6,20 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
-- Expense
-- Print Template
-- Label
-- Modes of Payment
-- Invoice Payment
-- Terms of Delivery 
-- Terms of Payment
-- Way of Delivery
-- Company Information
-- Company Setting
+- get_customer_by_customer_number
+- list_customers
 
-### Fixed
-- Typoes with currency that shoud be currencies
-- Files for customer and currency were mixed up
+### Removed
+- All existing code and started with new openapi generator based version
 
 ## [0.3.0] - 2021-02-03
 ### Added

@@ -3,87 +3,19 @@
 Unofficial API Client for Fortnox. For more details about Fortnox API, please see
 [https://developer.fortnox.se/documentation/](https://developer.fortnox.se/documentation/)
 
+Built from Unofficial OpenAPI Specification at
+[https://github.com/rsystem-se/fortnox_openapi](https://github.com/rsystem-se/fortnox_openapi)
+
 The documentation for FortnoxEx can be found at
 [https://hexdocs.pm/fortnox_ex](https://hexdocs.pm/fortnox_ex)
+
+## Missing or incorrect features
+
+Please see the specification at https://github.com/rsystem-se/fortnox_openapi before opening any issues in this repository.
 
 ## Stability and Quality of this library
 
 Not used in production. Untested to most degree. Help wanted. Rate limiting is tested. Use with caution.
-
-## Models
-
-* Absence Transaction
-* Account
-* Account Chart
-* Articles
-* Asset (actions not implemented)
-* Attendance Transaction
-* Company Information
-* Company Setting
-* Contract
-* Currency
-* Customer
-* Employee
-* Expense
-* Invoice (actions not implemented)
-* Invoice Payment (actions not implemented)
-* Label
-* Modes of Payment
-* Offer (actions not implemented)
-* Order (actions not implemented)
-* Price List
-* Print Template
-* Project (actions not implemented)
-* Supplier
-* Supplier Invoice
-* Terms of Delivery
-* Terms of Payment
-* Unit
-* Way of Delivery
-
-**NOT SUPPORTED YET - HELP WANTED**
-* Archive
-* Article File Connection
-* Asset Type
-* Contract Accrual
-* Contract Template
-* Cost Center
-* Digital Receipt
-* Financial Year
-* Inbox
-* Invoice Accrual
-* Invoice File Connection
-* Locked Period
-* Nox Finans Invoice
-* Predefined Account
-* Predefined Voucher Serie
-* Salary Transaction
-* Schedule Time
-* SIE
-* Supplier Invoice Accrual
-* Supplier Invoice External URL Connection
-* Supplier Invoice File Connection
-* Supplier Invoice Payment
-* Tax Reduction
-* Trusted Email Domain
-* Trusted Email Sender
-* Voucher File Connection
-* Voucher Serie
-* Voucher
-* Warehouse Custom Inbound Document
-* Warehouse Custom Outbound Document
-* Warehouse Information
-* Warehouse Item Summary
-* Warehouse Resource Specific Field
-
-## Features
-
-* Create
-* List
-* Stream (all pages for paginated list results)
-* Update
-* Delete
-* Actions
 
 ## Installation
 
