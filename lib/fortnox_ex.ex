@@ -63,6 +63,8 @@ defmodule FortnoxEx do
 
   defdelegate get_company_information(client), to: Models.CompanyInformation
 
+  defdelegate get_company_settings(client), to: Models.CompanySetting
+
   defdelegate create_currency(client, currency_attrs), to: Models.Currency
   defdelegate list_currencies(client, query), to: Models.Currency
   defdelegate stream_currencies(client, query), to: Models.Currency

@@ -19,6 +19,7 @@ Not used in production. Untested to most degree. Help wanted. Rate limiting is t
 * Asset (actions not implemented)
 * Attendance Transaction
 * Company Information
+* Company Setting
 * Contract
 * Currency
 * Customer
@@ -44,7 +45,6 @@ Not used in production. Untested to most degree. Help wanted. Rate limiting is t
 * Archive
 * Article File Connection
 * Asset Type
-* Company Setting
 * Contract Accrual
 * Contract Template
 * Cost Center
