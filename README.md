@@ -36,6 +36,21 @@ def deps do
 end
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/fortnox_ex](https://hexdocs.pm/fortnox_ex).
+## Usage
+
+### Exchanging an authorization code for an access token
+
+```
+FortnoxEx.Connection.get_access_token(client_secret, authorization_code)
+{:ok, "65cc2c87-de81-45d6-c792-aad68528ff17"}
+```
+
+### Sample fetch of a customer
+```
+connection = FortnoxEx.Connection.new("1234", "567890")
+customer = FortnoxEx.Api.Default.get_customer_by_customer_number(connection, "1")
+IO.puts("Customer name is: #{customer."Name"}")
+```
+
+Note that the keys of the models are PascalCase and therefore needs to be
+accessed like this: ````model."KeyName"```` instead of just ```model.KeyName```
