@@ -36,9 +36,9 @@ defmodule FortnoxEx.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [
-      {:tesla, "~> 1.2"},
+      {:tesla, "~> 1.4"},
       {:fuse, "~> 2.4"},
-      {:hackney, "~> 1.17.0"},
+      {:hackney, "~> 1.17"},
       {:poison, "~> 3.0"},
       {:ex_doc, ">= 0.0.0", only: :dev, runtime: false},
     ]
