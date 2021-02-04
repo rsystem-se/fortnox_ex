@@ -9,6 +9,6 @@ defmodule FortnoxExTest do
 
   @tag :skip
   test "test get_auth_code" do
-    {:ok, access_token} = FortnoxEx.Connection.get_access_token("JsWRKyKQhd", "8ef89755-eefe-0c2a-6ba6-36effdab2101")
+    {:ok, access_token} = FortnoxEx.Connection.get_access_token("1234", "567890")
   end
 end
